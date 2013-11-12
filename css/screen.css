@@ -45,6 +45,12 @@ h6 .small,
 .navbar-brand {
   font-weight: bold;
 }
+.navbar-static-top {
+  border-width: 0;
+}
+.navbar-static-top .xcontainer {
+  border-bottom: 1px #004b4c solid;
+}
 .deco {
   position: absolute;
   top: 90px;
