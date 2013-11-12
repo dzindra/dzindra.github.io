@@ -1,3 +1,13 @@
-name: Your New Jekyll Site
+exclude: ['.idea','less','sources','CNAME','README.md','LICENSE']
+keep_files: ['.git','.idea']
+permalink: pretty
+paginate: 5
+timezone: Europe/Prague
 markdown: redcarpet
 pygments: true
+
+name: Jindřich Doležy
+author: Jindřich Doležy
+url: http://blog.dolezy.cz/
+basePath:
+email: jindrich@dolezy.cz
