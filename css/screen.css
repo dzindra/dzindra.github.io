@@ -1,0 +1,57 @@
+/*
+Primary Color:
+004C4C	0E3939	003131	29A5A5	4AA5A5
+Complementary Color:
+7F3900	5F3818	522500	BF7130	BF8556
+*/
+a:hover {
+  text-decoration: none;
+}
+.xcontainer {
+  padding: 0 15px;
+  max-width: 1000px;
+}
+@media (min-width: 768px) {
+  .xcontainer {
+    margin-left: 280px;
+  }
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  padding-left: 10px;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+.deco {
+  position: absolute;
+  top: 90px;
+  width: 245px;
+  height: 224px;
+  z-index: -100;
+  background-image: url(../images/bg.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+}

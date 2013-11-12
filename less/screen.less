@@ -1,0 +1,34 @@
+@import "bootstrap/variables";
+
+a:hover {
+  text-decoration: none;
+}
+
+.xcontainer {
+  padding: 0 15px;
+  max-width: 1000px;
+  @media (min-width: @screen-sm) {
+    margin-left: 280px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  small, .small {
+    padding-left: 10px;
+  }
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.deco {
+  position: absolute;
+  top: 90px;
+  width: 245px;
+  height: 224px;
+  z-index: -100;
+  background-image: url(../images/bg.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
