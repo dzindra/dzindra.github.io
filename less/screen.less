@@ -1,42 +1,64 @@
 @import "bootstrap/variables";
 
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bg1.png');
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+}
+
+@splitBgShift: 2000px;
+@splitBgMenuCols: 3;
+
+.splitBg {
+  position: absolute;
+  left: -@splitBgShift;
+  top: 0;
+  height: 100%;
+  background-image: url('../images/bg2.png');
+  z-index: -1;
+
+  div {
+    position: absolute;
+    top: 0;
+    right: 65px;
+    background-image: url('../images/con.png');
+    width: 388px;
+    height: 217px;
+  }
+
+  .splitBgWidth(@base) {
+    width: @splitBgShift + @base * (@splitBgMenuCols/@grid-columns);
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .splitBgWidth(@container-sm);
+  }
+
+  @media (min-width: @screen-md-min) {
+    .splitBgWidth(@container-md);
+  }
+
+  @media (min-width: @screen-lg-min) {
+    .splitBgWidth(@container-lg);
+  }
+}
+
+.menu {
+  @media (max-width: @screen-xs-max) {
+    background-image: url('../images/bg2.png');
+  }
+  @media (min-width: @screen-sm-min) {
+    margin-top: 270px;
+  }
+}
+
 a:hover {
   text-decoration: none;
 }
 
-.xcontainer {
-  padding: 0 15px;
-  max-width: 1000px;
-  @media (min-width: @screen-sm) {
-    margin-left: 280px;
-  }
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  small, .small {
-    padding-left: 10px;
-  }
-}
-
-.navbar-brand {
-  font-weight: bold;
-}
-
-.navbar-static-top {
-  border-width: 0;
-
-  .xcontainer {
-    border-bottom: 1px @text-color solid;
-  }
-}
-
-.deco {
-  position: absolute;
-  top: 90px;
-  width: 245px;
-  height: 224px;
-  z-index: -100;
-  background-image: url(../images/bg.png);
-  background-position: top left;
-  background-repeat: no-repeat;
-}

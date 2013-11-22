@@ -14,8 +14,8 @@
 
 <body>
 
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="xcontainer">
+<!--nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
@@ -39,21 +39,23 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav-->
 
-<div class="deco hidden-xs hidden-print"></div>
 
-<div class="xcontainer">
+<div class="container">
+    <div class="splitBg hidden-xs"><div></div></div>
     <div class="row">
-        <div class="col-xs-12">
-        {{ content }}
+        <div class="col-sm-3 menu">
+
+            toto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menutoto je menu
         </div>
-    </div>
+        <div class="col-sm-9 col-md-offset-1 col-md-8">
+            {{ content }}
 
-    <div class="row">
-        <hr/>
-        {{ site.author }}<br/>
-        {{ site.email }}
+            <hr/>
+            {{ site.author }}<br/>
+            {{ site.email }}
+        </div>
     </div>
 </div>
 

@@ -4,60 +4,57 @@ Primary Color:
 Complementary Color:
 7F3900	5F3818	522500	BF7130	BF8556
 */
-a:hover {
-  text-decoration: none;
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bg1.png');
 }
-.xcontainer {
-  padding: 0 15px;
-  max-width: 1000px;
+.container {
+  min-height: 100%;
+  position: relative;
+}
+.splitBg {
+  position: absolute;
+  left: -2000px;
+  top: 0;
+  height: 100%;
+  background-image: url('../images/bg2.png');
+  z-index: -1;
+}
+.splitBg div {
+  position: absolute;
+  top: 0;
+  right: 65px;
+  background-image: url('../images/con.png');
+  width: 388px;
+  height: 217px;
 }
 @media (min-width: 768px) {
-  .xcontainer {
-    margin-left: 280px;
+  .splitBg {
+    width: 2187.5px;
   }
 }
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small {
-  padding-left: 10px;
+@media (min-width: 992px) {
+  .splitBg {
+    width: 2242.5px;
+  }
 }
-.navbar-brand {
-  font-weight: bold;
+@media (min-width: 1200px) {
+  .splitBg {
+    width: 2292.5px;
+  }
 }
-.navbar-static-top {
-  border-width: 0;
+@media (max-width: 767px) {
+  .menu {
+    background-image: url('../images/bg2.png');
+  }
 }
-.navbar-static-top .xcontainer {
-  border-bottom: 1px #004b4c solid;
+@media (min-width: 768px) {
+  .menu {
+    margin-top: 270px;
+  }
 }
-.deco {
-  position: absolute;
-  top: 90px;
-  width: 245px;
-  height: 224px;
-  z-index: -100;
-  background-image: url(../images/bg.png);
-  background-position: top left;
-  background-repeat: no-repeat;
+a:hover {
+  text-decoration: none;
 }
