@@ -45,16 +45,73 @@ body {
     width: 2292.5px;
   }
 }
+.menu ul {
+  padding: 0;
+}
 @media (max-width: 767px) {
   .menu {
     background-image: url('../images/bg2.png');
   }
+  .menu ul {
+    margin: 0;
+    list-style-type: none;
+  }
+  .menu ul li {
+    float: left;
+    line-height: 50px;
+    border-right: 1px #9da145 solid;
+  }
+  .menu ul li:last-child {
+    border-right: 0;
+  }
 }
 @media (min-width: 768px) {
   .menu {
-    margin-top: 270px;
+    margin-top: 240px;
+    font-size: 20px;
+  }
+  .menu ul {
+    list-style-type: square;
+    list-style-position: inside;
+  }
+  .menu ul li {
+    border-bottom: 1px #9da145 solid;
+    line-height: 50px;
+    color: #d5d985;
+  }
+  .menu ul li a {
+    color: #4f7036;
+  }
+  .menu ul li.active {
+    color: #004b4b;
+  }
+  .menu ul li.active a,
+  .menu ul li a:hover {
+    color: #004b4b;
+    text-decoration: none;
+  }
+  .menu ul li:last-child {
+    border-bottom: 0;
   }
 }
-a:hover {
-  text-decoration: none;
+h1 {
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+h2 small {
+  font-size: 45%;
+  display: block;
+  margin-top: 8px;
+}
+h2 a {
+  color: #004c4c;
+}
+.readmore {
+  text-align: right;
+  border-bottom: 1px #9da145 solid;
 }
