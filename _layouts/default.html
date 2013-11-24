@@ -24,7 +24,7 @@
             </h1>
 
             <ul>
-                {% if page.active ==  %}
+                {% if page.active == %}
                 <li class="active">{% else %}
                 <li>{% endif %}<a href="/{{ page.lang }}/">{{ site.data.lang.menuHome[page.lang] }}</a></li>
 
@@ -42,6 +42,8 @@
             </ul>
 
             <p class="text-center">
+                <a href="mailto:{{ site.email }}"><span class="sprite sprite-email"></span></a>
+
                 <a href="https://cz.linkedin.com/in/dolezy/" target="_blank"><span
                         class="sprite sprite-linkedin"></span></a>
 
@@ -53,7 +55,8 @@
 
 
             <p class="text-center">
-                <small><a href="/{{ site.data.lang.menuSwitchLangCode[page.lang] }}/{{ page.active }}">{{ site.data.lang.menuSwitchLang[page.lang] }}</a></small>
+                <small><a href="/{{ site.data.lang.menuSwitchLangCode[page.lang] }}/{{ page.active }}">
+                    {{ site.data.lang.menuSwitchLang[page.lang] }}</a></small>
             </p>
 
             <div class="clearfix"></div>
@@ -62,8 +65,15 @@
             {{ content }}
 
             <hr/>
-            {{ site.author }}<br/>
-            {{ site.email }}
+
+            <p class="text-center">
+                <small>
+                    Licensed under a
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC
+                        BY-SA 3.0</a> | BTC <a
+                        href="https://blockchain.info/address/{{ site.btc }}">{{ site.btc }}</a>
+                </small>
+            </p>
         </div>
     </div>
 </div>
