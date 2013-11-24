@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ site.name }} | {{ page.title }}</title>
+    <title>{{ site.name }}{% if page.title %} | {{ page.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
 
     <link href="/css/main.css" media="print, projection, screen, tv" rel="stylesheet" type="text/css"/>
@@ -20,25 +20,40 @@
     <div class="row">
         <div class="col-sm-3 menu">
             <h1>Jindřich Doležy
-                <small>personal site</small>
+                <small>{{ site.data.lang.claim[page.lang] }}</small>
             </h1>
+
             <ul>
+                {% if page.active ==  %}
+                <li class="active">{% else %}
+                <li>{% endif %}<a href="/{{ page.lang }}/">{{ site.data.lang.menuHome[page.lang] }}</a></li>
+
                 {% if page.active == 'profile' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/">Profile</a></li>
+                <li>{% endif %}<a href="/{{ page.lang }}/profile">{{ site.data.lang.menuProfile[page.lang] }}</a></li>
+
+                {% if page.active == 'contact' %}
+                <li class="active">{% else %}
+                <li>{% endif %}<a href="/{{ page.lang }}/contact">{{ site.data.lang.menuContact[page.lang] }}</a></li>
 
                 {% if page.active == 'blog' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/blog/">Blog</a></li>
+                <li>{% endif %}<a href="/{{ page.lang }}/blog/">{{ site.data.lang.menuBlog[page.lang] }}</a></li>
             </ul>
 
             <p class="text-center">
-                <a href="https://cz.linkedin.com/in/dolezy/" target="_blank"><span class="sprite sprite-linkedin"></span></a>
+                <a href="https://cz.linkedin.com/in/dolezy/" target="_blank"><span
+                        class="sprite sprite-linkedin"></span></a>
 
                 <a href="https://github.com/dzindra" target="_blank"><span class="sprite sprite-github"></span></a>
 
                 <a href="https://twitter.com/xDzindra" target="_blank"><span class="sprite sprite-twitter"></span></a>
 
+            </p>
+
+
+            <p class="text-center">
+                <small><a href="/{{ site.data.lang.menuSwitchLangCode[page.lang] }}/{{ page.active }}">{{ site.data.lang.menuSwitchLang[page.lang] }}</a></small>
             </p>
 
             <div class="clearfix"></div>

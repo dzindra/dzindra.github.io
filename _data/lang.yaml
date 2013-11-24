@@ -1,0 +1,31 @@
+# main menu items
+menuHome:
+  en: Home
+  cs: Domů
+
+menuProfile:
+  en: Profile
+  cs: Profil
+
+menuContact:
+  en: Contact
+  cs: Kontakt
+
+menuBlog:
+  en: Blog
+  cs: Blog
+
+# language switcher
+menuSwitchLang:
+  en: přepnout do češtiny
+  cs: switch to English
+
+menuSwitchLangCode:
+  en: cs
+  cs: en
+
+# other strings from default.html
+claim:
+  en: personal site
+  cs: osobní stránka
+
