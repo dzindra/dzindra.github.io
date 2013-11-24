@@ -1,7 +1,6 @@
 // -- Bootstrap import --
 
 // Core variables and mixins
-@import "bootstrap/variables.less";
 @import "bootstrap/mixins.less";
 
 // Reset
@@ -24,6 +23,10 @@
 // Inlined images and sprites
 @import "sprite.less";
 
+// variables.less will import bootstrap/variables.less
+// this import needs to be last, otherwise overrided variables would not work (i have no idea why)
+@import "variables.less";
+
 
 body {
   position: absolute;
@@ -36,10 +39,7 @@ body {
   position: relative;
 }
 
-@splitBgShift: 2000px;
-@splitBgMenuCols: 3;
-
-.splitBg {
+.split-bg {
   position: absolute;
   left: -@splitBgShift;
   top: 0;
@@ -69,19 +69,13 @@ body {
   }
 }
 
-@menuSquareColor: #d5d985;
-// #004b4b;
-@menuSquareActiveColor: @link-hover-color;
-// #4f7036;
-@menuItemColor: @link-color;
-//#004b4b;
-@menuItemActiveColor: @link-hover-color;
-//#9da145;
-@menuSeparatorColor: @hr-border;
-
 .menu {
   ul {
     padding: 0;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 
   @media (max-width: @screen-xs-max) {
@@ -123,7 +117,6 @@ body {
         }
         &.active a, a:hover {
           color: @menuItemActiveColor;
-          text-decoration: none;
         }
       }
 
@@ -138,6 +131,11 @@ h1 {
   font-size: @font-size-h3;
   font-weight: normal;
   margin-bottom: @line-height-computed*2;
+
+  small {
+    display: block;
+    margin-top: 4px;
+  }
 }
 
 h2 {
@@ -158,4 +156,10 @@ h2 {
 .readmore {
   text-align: right;
   border-bottom: 1px @hr-border solid;
+}
+
+@media (min-width: @screen-sm-min) {
+  .main-content {
+    margin-top: 60px;
+  }
 }
