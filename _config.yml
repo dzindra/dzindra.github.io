@@ -2,6 +2,7 @@ exclude: ['.idea','less','sources','CNAME','README.md','LICENSE']
 keep_files: ['.git','.idea']
 permalink: pretty
 paginate: 5
+paginate_path: "en/blog/page:num"
 timezone: Europe/Prague
 
 markdown: redcarpet
