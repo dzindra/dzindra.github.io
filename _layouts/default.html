@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ site.name }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+    <title>{{site.name}}{% if page.title %} | {{page.title}}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
 
     <link href="/css/main.css" media="print, projection, screen, tv" rel="stylesheet" type="text/css"/>
@@ -12,68 +12,74 @@
 
 <body>
 
-<div class="container">
-    <div class="split-bg hidden-xs">
-        <div class="sprite sprite-con hidden-xs"></div>
-    </div>
 
-    <div class="row">
-        <div class="col-sm-3 menu">
-            <h1>Jindřich Doležy
-                <small>{{ site.data.lang.claim[page.lang] }}</small>
+<nav class="top">
+    <div class="container">
+        <div class="row">
+            <h1 class="title"><a href="/{{page.lang}}/">Jindřich Doležy</a>
+                <small>{{site.data.lang.claim[page.lang]}}</small>
             </h1>
 
-            <ul>
+            <div class="icons">
+                <a href="https://twitter.com/xDzindra" target="_blank"><span class="socicon socicon-twitter"></span></a>
+
+                <a href="https://github.com/dzindra" target="_blank"><span class="socicon socicon-github"></span></a>
+
+                <a href="https://cz.linkedin.com/in/dolezy/" target="_blank"><span class="socicon socicon-linkedin"></span></a>
+            </div>
+
+            <div class="clearfix visible-xs"></div>
+
+            <ul class="menu">
                 {% if page.active == %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{ page.lang }}/">{{ site.data.lang.menuHome[page.lang] }}</a></li>
+                <li>{% endif %}<a href="/{{page.lang}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
 
                 {% if page.active == 'profile' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{ page.lang }}/profile">{{ site.data.lang.menuProfile[page.lang] }}</a></li>
+                <li>{% endif %}<a href="/{{page.lang}}/profile">{{site.data.lang.menuProfile[page.lang]}}</a>
+                </li>
 
                 {% if page.active == 'contact' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{ page.lang }}/contact">{{ site.data.lang.menuContact[page.lang] }}</a></li>
+                <li>{% endif %}<a href="/{{page.lang}}/contact">{{site.data.lang.menuContact[page.lang]}}</a>
+                </li>
 
                 {% if page.active == 'blog' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{ page.lang }}/blog/">{{ site.data.lang.menuBlog[page.lang] }}</a></li>
+                <li>{% endif %}<a href="/{{page.lang}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
             </ul>
 
-            <p class="text-center">
-                <a href="mailto:{{ site.email }}"><span class="sprite sprite-email"></span></a>
 
-                <a href="https://cz.linkedin.com/in/dolezy/" target="_blank"><span
-                        class="sprite sprite-linkedin"></span></a>
-
-                <a href="https://github.com/dzindra" target="_blank"><span class="sprite sprite-github"></span></a>
-
-                <a href="https://twitter.com/xDzindra" target="_blank"><span class="sprite sprite-twitter"></span></a>
-
-            </p>
-
-
-            <p class="text-center">
+            <!--p class="text-center">
                 <small><a href="/{{ site.data.lang.menuSwitchLangCode[page.lang] }}/{{ page.active }}">
                     {{ site.data.lang.menuSwitchLang[page.lang] }}</a></small>
-            </p>
+            </p-->
 
-            <div class="clearfix"></div>
         </div>
-        <div class="col-sm-9 col-md-offset-1 col-md-8 main-content">
-            {{ content }}
+    </div>
+</nav>
 
-            <hr/>
+<div class="main">
+    <div class="deco"></div>
 
-            <p class="text-center">
-                <small>
-                    Licensed under a
-                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC
-                        BY-SA 3.0</a> | BTC <a
-                        href="https://blockchain.info/address/{{ site.btc }}">{{ site.btc }}</a>
-                </small>
-            </p>
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                {{content}}
+
+                <hr/>
+
+                <p class="text-center">
+                    <small>
+                        Licensed under a
+                        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC
+                            BY-SA 3.0</a> | BTC
+                        <a href="https://blockchain.info/address/{{site.btc}}">{{site.btc}}</a>
+                    </small>
+                </p>
+            </div>
+
         </div>
     </div>
 </div>

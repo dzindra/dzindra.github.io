@@ -1,34 +1,25 @@
 @import "bootstrap/variables.less";
 
-@body-bg: #d5d985;
-@split-bg: #e5e8b4;
+@body-bg: #e5e8b4;
+@split-bg: #d5d985;
 @text-color: #3e3e3e;
 
 @link-color: #4f7036;
 @link-hover-color: #004b4b;
+@menu-item-color: @link-hover-color;
 
 @font-family-base: @font-family-serif;
 @font-size-base: 16px;
 @line-height-base: 1.6;
 
-@headings-font-weight: 600;
-@headings-color: #004c4c;
+@headings-color: @link-color;
 @headings-small-color: @text-color;
 
 @hr-border: #9da145;
 
-@pagination-bg:                        @split-bg;
+@pagination-bg:                        @body-bg;
 @pagination-border:                    @hr-border;
 @pagination-hover-bg:                  @hr-border;
 @pagination-active-bg:                 @hr-border;
 @pagination-active-color:              @split-bg;
 @pagination-disabled-color:            @text-color;
-
-@splitBgShift: 2000px;
-@splitBgMenuCols: 3;
-
-@menuSquareColor: #d5d985;
-@menuSquareActiveColor: @link-hover-color;
-@menuItemColor: @link-color;
-@menuItemActiveColor: @link-hover-color;
-@menuSeparatorColor: @hr-border;
