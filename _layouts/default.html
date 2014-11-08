@@ -36,14 +36,9 @@
                 <li class="active">{% else %}
                 <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
 
-                {% if page.active == 'profile' %}
+                {% if page.active == 'about' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/profile/">{{site.data.lang.menuProfile[page.lang]}}</a>
-                </li>
-
-                {% if page.active == 'contact' %}
-                <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/contact/">{{site.data.lang.menuContact[page.lang]}}</a>
+                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/about/">{{site.data.lang.menuAbout[page.lang]}}</a>
                 </li>
 
                 {% if page.active == 'blog' %}

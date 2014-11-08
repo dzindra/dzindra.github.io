@@ -1,15 +1,11 @@
 # main menu items
 menuHome:
   en: Home
-  cs: Domů
+  cs: Úvod
 
-menuProfile:
-  en: Profile
-  cs: Profil
-
-menuContact:
-  en: Contact
-  cs: Kontakt
+menuAbout:
+  en: 'About me'
+  cs: 'Kdo jsem'
 
 menuBlog:
   en: Blog
