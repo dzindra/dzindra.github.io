@@ -8,8 +8,9 @@ active: blog
 <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     <small>{{ post.date | date: "%d.%m.%Y" }}</small>
 </h2>
-{{ post.excerpt }}
-<p class="readmore"><a href="{{ post.url | prepend: site.baseurl }}">Read more &gt;</a></p>
+{{ post.content }}
+
+{% unless forloop.last %}<hr/>{% endunless %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}

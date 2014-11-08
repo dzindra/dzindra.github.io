@@ -43,7 +43,7 @@
 
                 {% if page.active == 'blog' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
+                <li>{% endif %}<a href="{{site.baseurl}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
 
                 <li class="lang">
                     <a href="{{site.baseurl}}{{ site.data.lang.menuSwitchLangUrl[page.lang] }}/{{ page.active }}">
@@ -55,7 +55,7 @@
 </nav>
 
 <div class="main">
-    <div class="deco"></div>
+    <div class="deco hidden-xs"></div>
 
     <div class="container">
         <div class="row">

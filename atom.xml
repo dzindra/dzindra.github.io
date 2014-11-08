@@ -20,7 +20,7 @@ layout: null
         <title>{{ post.title | strip_html }}</title>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <link rel="alternate" href="{{ site.baseurl | prepend: site.url }}{{ post.url }}"/>
-        <summary>{{ post.excerpt | strip_html }}</summary>
+        <summary>{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</summary>
     </entry>
     {% endfor %}
 </feed>
