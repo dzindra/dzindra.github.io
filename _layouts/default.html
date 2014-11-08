@@ -6,18 +6,18 @@
     <title>{{site.name}}{% if page.title %} | {{page.title}}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
 
-    <link href="/css/main.css" media="print, projection, screen, tv" rel="stylesheet" type="text/css"/>
+    <link href="{{site.baseurl}}/css/main.css" media="print, projection, screen, tv" rel="stylesheet" type="text/css"/>
     <link href="{{site.baseurl}}/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
 </head>
 
 
 <body>
-
+{% if page.lang == %}<strong>No lang!</strong>{% else %}
 
 <nav class="top">
     <div class="container">
         <div class="row">
-            <h1 class="title"><a href="/{{page.lang}}/">Jindřich Doležy</a>
+            <h1 class="title"><a href="{{site.baseurl}}{{page.lang_url}}/">Jindřich Doležy</a>
                 <small>{{site.data.lang.claim[page.lang]}}</small>
             </h1>
 
@@ -34,29 +34,27 @@
             <ul class="menu">
                 {% if page.active == %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{page.lang}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
+                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
 
                 {% if page.active == 'profile' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{page.lang}}/profile">{{site.data.lang.menuProfile[page.lang]}}</a>
+                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/profile/">{{site.data.lang.menuProfile[page.lang]}}</a>
                 </li>
 
                 {% if page.active == 'contact' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{page.lang}}/contact">{{site.data.lang.menuContact[page.lang]}}</a>
+                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/contact/">{{site.data.lang.menuContact[page.lang]}}</a>
                 </li>
 
                 {% if page.active == 'blog' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="/{{page.lang}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
+                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
+
+                <li class="lang">
+                    <a href="{{site.baseurl}}{{ site.data.lang.menuSwitchLangUrl[page.lang] }}/{{ page.active }}">
+                        {{ site.data.lang.menuSwitchLang[page.lang] }}</a>
+                </li>
             </ul>
-
-
-            <!--p class="text-center">
-                <small><a href="/{{ site.data.lang.menuSwitchLangCode[page.lang] }}/{{ page.active }}">
-                    {{ site.data.lang.menuSwitchLang[page.lang] }}</a></small>
-            </p-->
-
         </div>
     </div>
 </nav>
@@ -73,10 +71,10 @@
 
                 <p class="text-center">
                     <small>
-                        Licensed under a
+                        &copy; <a href="mailto:{{site.email}}">Jindřich Doležy</a>, 2014 |
                         <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC
-                            BY-SA 3.0</a> | BTC
-                        <a href="https://blockchain.info/address/{{site.btc}}">{{site.btc}}</a>
+                            BY-SA 3.0</a> |
+                        BTC <a href="https://blockchain.info/address/{{site.btc}}">{{site.btc}}</a>
                     </small>
                 </p>
             </div>
@@ -85,5 +83,6 @@
     </div>
 </div>
 
+{% endif %}
 </body>
 </html>

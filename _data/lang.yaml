@@ -17,12 +17,12 @@ menuBlog:
 
 # language switcher
 menuSwitchLang:
-  en: přepnout do češtiny
-  cs: switch to English
+  en: 'česky'
+  cs: 'English'
 
-menuSwitchLangCode:
-  en: cs
-  cs: en
+menuSwitchLangUrl:
+  en: /cs
+  cs:
 
 # other strings from default.html
 claim:
