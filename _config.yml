@@ -2,7 +2,7 @@ exclude: ['.idea','less','sources','CNAME','README.md','LICENSE']
 keep_files: ['.git','.idea']
 permalink: pretty
 paginate: 5
-paginate_path: "en/blog/page:num"
+paginate_path: "blog/page:num"
 timezone: Europe/Prague
 
 markdown: redcarpet
@@ -13,6 +13,15 @@ author: Jindřich Doležy
 email: jindrich@dolezy.cz
 btc: 14ABuhZP7UnZQjwtyWrL19DUiof2jw5ykt
 
-# url and base path can not end with slash
+# url and baseurl can not end with slash
 url: http://blog.dolezy.cz
-basePath:
+baseurl:
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      categories: ["blog"]
