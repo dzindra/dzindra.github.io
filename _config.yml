@@ -21,6 +21,19 @@ defaults:
   -
     scope:
       path: ""
+    values:
+      lang: "en"
+      lang_url: ""
+      layout: "default"
+  -
+    scope:
+      path: "cs"
+    values:
+      lang: "cs"
+      lang_url: "/cs"
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
