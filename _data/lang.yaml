@@ -1,35 +1,35 @@
 # main menu items
 menuHome:
   en: Home
-  cs: Úvod
+  cz: Úvod
 
 menuAbout:
   en: 'About me'
-  cs: 'Kdo jsem'
+  cz: 'Kdo jsem'
 
 menuBlog:
   en: Blog
-  cs: Blog
+  cz: Blog
 
 # language switcher
 menuSwitchLang:
   en: 'česky'
-  cs: 'English'
+  cz: 'English'
 
 menuSwitchLangUrl:
-  en: /cs
-  cs:
+  en: /cz
+  cz:
 
 # other strings from default.html
 claim:
   en: personal site
-  cs: osobní stránka
+  cz: osobní stránka
 
 # blogbox
 blogboxTitle:
   en: Latest blog posts
-  cs: Nejnovější příspěvky
+  cz: Nejnovější příspěvky
 
 blogboxSubtitle:
   en: I am blogging mostly in English, but there might be some blog posts in Czech too.
-  cs: Blog se snažím psát převážně anglicky, nevylučuji ale, že se tu objeví i nějaké české příspěvky.
+  cz: Blog se snažím psát převážně anglicky, nevylučuji ale, že se tu objeví i nějaké české příspěvky.
