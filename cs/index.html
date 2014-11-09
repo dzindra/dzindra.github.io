@@ -2,18 +2,13 @@
 active:
 ---
 
-<h2 class="smaller">Kdo jsem</h2>
-<p>Nějaký skvělý a úžasný oslavný text, který ještě musím vymyslet.
-    <a href="{{ site.baseurl }}/cs/about/">Více informací &raquo;</a></p>
+<h2>Kdo jsem</h2>
+<p>
+    Nějaký skvělý a úžasný oslavný text, který ještě musím vymyslet.
+
+    <a href="{{ site.baseurl }}{{ page.lang_url }}/about/">Více informací &raquo;</a>
+</p>
+
 <hr/>
-<h2 class="smaller">Nejnovější příspěvky</h2>
-<p><small>Blog se snažím psát převážně anglicky, nevylučuji ale, že se tu objeví i nějaké české příspěvky.</small></p>
 
-{% for post in site.posts limit: 3 %}
-
-<h3 class="smaller"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    <small>{{ post.date | date: "%d.%m.%Y" }}</small>
-</h3>
-{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt }}{% endif %}
-
-{% endfor %}
+{% include blogbox.html lang='cs' %}

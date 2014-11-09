@@ -25,3 +25,11 @@ claim:
   en: personal site
   cs: osobní stránka
 
+# blogbox
+blogboxTitle:
+  en: Latest blog posts
+  cs: Nejnovější příspěvky
+
+blogboxSubtitle:
+  en: I am blogging mostly in English, but there might be some blog posts in Czech too.
+  cs: Blog se snažím psát převážně anglicky, nevylučuji ale, že se tu objeví i nějaké české příspěvky.

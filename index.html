@@ -2,18 +2,13 @@
 active:
 ---
 
-<h2 class="smaller">About me</h2>
-<p>Oh hell, writing in English, this is going to be a disaster.
-    <a href="{{ site.baseurl }}/about/">Read more &raquo;</a></p>
+<h2>About me</h2>
+<p>
+    Oh hell, writing in English, this is going to be a disaster.
+
+    <a href="{{ site.baseurl }}{{ page.lang_url }}/about/">Read more &raquo;</a>
+</p>
+
 <hr/>
-<h2 class="smaller">Latest blog posts</h2>
-<p><small>I am blogging mostly in English, but there might be some blog posts in Czech too.</small></p>
 
-{% for post in site.posts limit: 3 %}
-
-<h3 class="smaller"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    <small>{{ post.date | date: "%d.%m.%Y" }}</small>
-</h3>
-{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt }}{% endif %}
-
-{% endfor %}
+{% include blogbox.html lang='en' %}

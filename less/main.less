@@ -59,30 +59,27 @@ body {
   }
 }
 
-h2 {
-  margin-top: @line-height-computed*2;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-
-  small {
-    font-size: 45%;
-    display: block;
-    margin: 8px 0 @line-height-computed*2 0;
-  }
-}
-
-h2.smaller {
-  font-size: @font-size-h3;
-}
-
-h3.smaller {
-  margin-top: @line-height-computed*2;
-  font-size: @font-size-h4;
-}
-
 .readmore {
   text-align: right;
   border-bottom: 1px @hr-border solid;
+}
+
+.blogbox {
+  .make-row();
+
+  .title {
+    .make-sm-column(4);
+  }
+
+  .entries {
+    .make-sm-column(8);
+  }
+
+  h2 {
+    font-size: @font-size-h3;
+  }
+
+  h3 {
+    font-size: @font-size-h4;
+  }
 }
