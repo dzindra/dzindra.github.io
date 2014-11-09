@@ -1,0 +1,19 @@
+{% comment %}
+
+  inputs:
+    f - link href (big one)
+    ff - img src (small one, optional)
+    t - title
+    g - lightbox group (optinal)
+    w - image width (optional)
+
+  also needs assets variable (base path for assets)
+
+{% endcomment %}
+{% if assets %}
+{% capture __ff %}{% if include.ff %}{{include.ff}}{% else %}{{include.f}}{% endif %}{% endcapture %}
+{% capture __g %}{% if include.g %}{{include.g}}{% else %}default{% endif %}{% endcapture %}
+<a href="{{assets}}/{{include.f}}" data-lightbox='{{__g}}' data-title='{{include.t}}'><img src="{{assets}}/{{__ff}}" alt="{{include.t}}" {% if include.w %}width="{{include.w}}" {% endif %}/></a>
+{% else %}
+<strong>missing assets variable!</strong>
+{% endif %}

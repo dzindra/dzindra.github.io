@@ -26,6 +26,9 @@
 // Styling of the top part (menu, title, icons)
 @import "top.less";
 //
+// Lightbox
+@import "lightbox.less";
+//
 // Custom overrides for bootstrap. variables.less will import bootstrap/variables.less
 // This import needs to be last, otherwise overriden variables would not work (i have no idea why)
 @import "variables.less";
@@ -41,7 +44,7 @@ body {
   a {
     text-decoration: underline;
   }
-  
+
   .deco {
     opacity: 0.05;
     position: absolute;
@@ -86,5 +89,11 @@ body {
 
   h3 {
     font-size: @font-size-h4;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  img {
+    max-width: 100% !important;
   }
 }
