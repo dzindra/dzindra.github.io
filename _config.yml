@@ -22,15 +22,15 @@ defaults:
     scope:
       path: ""
     values:
-      lang: "en"
+      lang: "cz"
       lang_url: ""
       layout: "default"
   -
     scope:
-      path: "cz"
+      path: "en"
     values:
-      lang: "cz"
-      lang_url: "/cz"
+      lang: "en"
+      lang_url: "/en"
   -
     scope:
       path: ""

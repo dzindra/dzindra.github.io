@@ -17,8 +17,8 @@ menuSwitchLang:
   cz: 'English'
 
 menuSwitchLangUrl:
-  en: /cz
-  cz:
+  en:
+  cz: /en
 
 # other strings from default.html
 claim:
@@ -31,5 +31,5 @@ blogboxTitle:
   cz: Nejnovější příspěvky
 
 blogboxSubtitle:
-  en: I am blogging mostly in English, but there might be some blog posts in Czech too.
-  cz: Blog píšu převážně anglicky, nevylučuji ale, že se tu objeví i nějaké české příspěvky.
+  en: I am blogging mostly in Czech, but there might be some blog posts in English too.
+  cz: Blog píšu převážně česky, nevylučuji ale, že se tu objeví i nějaké anglické příspěvky.
