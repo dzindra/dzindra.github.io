@@ -71,6 +71,14 @@ body {
   border-bottom: 1px @hr-border solid;
 }
 
+.twocol {
+  .make-row();
+
+  &>div {
+    .make-sm-column(6);
+  }
+}
+
 .blogbox {
   .make-row();
 
@@ -92,7 +100,7 @@ body {
   }
 }
 
-@media (max-width: @screen-xs-max) {
+@media (max-width: @screen-sm-max) {
   img {
     max-width: 100% !important;
   }
