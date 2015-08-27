@@ -22,6 +22,11 @@
     <meta name="msapplication-config" content="/icons/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
+    <meta property="og:title" content="{% if page.id %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
+    <meta property="og:type" content="{% if page.id %}article{% else %}website{% endif %}" />
+    <meta property="og:description" content="{% if page.id %}{{ page.summary }}{% else %}{{site.data.lang.defaultDescription[page.lang]}}{% endif %}" />
+    <meta property="og:url" content="{{site.url}}{{site.baseurl}}{% if page.id %}{{page.url}}{% else %}{{page.lang_url}}/{% endif %}" />
+
 {% if site.ga %}
     <script type="text/javascript">
         var _gaq = _gaq || [];

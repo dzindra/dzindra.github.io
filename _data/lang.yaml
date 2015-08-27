@@ -25,6 +25,10 @@ claim:
   en: personal site
   cz: osobní stránka
 
+defaultDescription:
+  en: Personal site and blog.
+  cz: Osobní stránka a blog.
+
 # blogbox
 blogboxTitle:
   en: Latest blog posts

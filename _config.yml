@@ -15,7 +15,7 @@ btc: 14ABuhZP7UnZQjwtyWrL19DUiof2jw5ykt
 ga: UA-28722419-1
 
 # url and baseurl can not end with slash
-url: http://blog.dolezy.cz
+url: http://dolezy.cz
 baseurl:
 
 defaults:
