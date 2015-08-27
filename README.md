@@ -1,4 +1,4 @@
 dzindra.github.io
 =================
 
-GitHub pages
+Zdrojové kódy k osobní stránce a blogu na [dolezy.cz](http://dolezy.cz)
