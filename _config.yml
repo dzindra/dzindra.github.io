@@ -1,4 +1,4 @@
-exclude: ['.idea','less','sources','CNAME','README.md','LICENSE']
+exclude: ['.idea','less','sources','CNAME','README.md','LICENSE','deploy.sh']
 keep_files: ['.git','.idea']
 permalink: pretty
 paginate: 5
