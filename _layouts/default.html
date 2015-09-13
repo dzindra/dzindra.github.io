@@ -73,12 +73,19 @@
                 <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/about/">{{site.data.lang.menuAbout[page.lang]}}</a>
                 </li>
 
+                {% if page.lang == 'cz' %}
                 {% if page.active == 'blog' %}
                 <li class="active">{% else %}
                 <li>{% endif %}<a href="{{site.baseurl}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
 
+                {% if page.active == 'museum' %}
+                <li class="active">{% else %}
+                <li>{% endif %}<a href="{{site.baseurl}}/museum/">{{site.data.lang.menuMuseum[page.lang]}}</a></li>
+                {% endif %}
+
+
                 <li class="lang">
-                    <a href="{{site.baseurl}}{{ site.data.lang.menuSwitchLangUrl[page.lang] }}/{{ page.active }}">
+                    <a href="{{site.baseurl}}{{ site.data.lang.menuSwitchLangUrl[page.lang] }}/">
                         {{ site.data.lang.menuSwitchLang[page.lang] }}</a>
                 </li>
             </ul>

@@ -11,6 +11,10 @@ menuBlog:
   en: Blog
   cz: Blog
 
+menuMuseum:
+  en: Museum
+  cz: Muzeum
+
 # language switcher
 menuSwitchLang:
   en: 'česky'

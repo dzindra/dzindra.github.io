@@ -96,6 +96,17 @@ body {
   }
 }
 
+.muzeum {
+  .make-row();
+
+  img {
+    .make-sm-column(4)
+  }
+  &>div {
+    .make-sm-column(8)
+  }
+}
+
 @media (max-width: @screen-sm-max) {
   img {
     max-width: 100% !important;
