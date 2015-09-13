@@ -8,6 +8,6 @@ Po nějaké době jsem vytáhl ze skříně starý notebook, na kterém jsem dř
  projekty a objevil pár her, které jsem pomáhal vytvářet.
 
 Byla by škoda je nechat jenom tak ležet a proto je tady
- nová sekce, ve které tyto výtvory můžete obdivovat. Takže neváhejte a vzhůru do [muzea][museum].
+ nová sekce, ve které tyto výtvory můžete obdivovat. Takže neváhejte a vzhůru do [muzea][muzeum].
 
-[museum]: {{site.baseurl}}/museum
+[muzeum]: {{site.baseurl}}/muzeum
