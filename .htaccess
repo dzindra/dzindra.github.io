@@ -18,7 +18,7 @@ AddDefaultCharset utf-8
 
         RewriteCond %{HTTP_HOST} !^dolezy\.cz$ [NC]
         RewriteCond %{HTTP_HOST} !^localhost$ [NC]
-        RewriteRule (.*) http://dolezy.cz/$1 [R=301,QSA,L]
+        RewriteRule (.*) https://dolezy.cz/$1 [R=301,QSA,L]
 </IfModule>
 
 # disables conditional caching
