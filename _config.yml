@@ -2,7 +2,7 @@ exclude: ['.idea','less','sources','CNAME','README.md','LICENSE','deploy.sh']
 keep_files: ['.git','.idea']
 permalink: pretty
 paginate: 5
-paginate_path: "blog/page:num"
+paginate_path: "/blog/page:num/"
 timezone: Europe/Prague
 
 markdown: kramdown
@@ -14,9 +14,8 @@ email: jindrich@dolezy.cz
 btc: 14ABuhZP7UnZQjwtyWrL19DUiof2jw5ykt
 ga: UA-28722419-1
 
-# url and baseurl can not end with slash
+# url can not end with slash
 url: http://dolezy.cz
-baseurl:
 
 defaults:
   -

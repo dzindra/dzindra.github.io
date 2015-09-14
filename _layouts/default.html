@@ -6,8 +6,8 @@
     <title>{{site.name}}{% if page.title %} | {{page.title}}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
 
-    <link href="{{site.baseurl}}/css/main.css" media="print, projection, screen, tv" rel="stylesheet" type="text/css"/>
-    <link href="{{site.baseurl}}/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
+    <link href="/css/main.css" media="print, projection, screen, tv" rel="stylesheet" type="text/css"/>
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Atom Feed" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png" />
@@ -25,7 +25,7 @@
     <meta property="og:title" content="{% if page.id %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
     <meta property="og:type" content="{% if page.id %}article{% else %}website{% endif %}" />
     <meta property="og:description" content="{% if page.id %}{{ page.summary }}{% else %}{{site.data.lang.defaultDescription[page.lang]}}{% endif %}" />
-    <meta property="og:url" content="{{site.url}}{{site.baseurl}}{% if page.id %}{{page.url}}{% else %}{{page.lang_url}}/{% endif %}" />
+    <meta property="og:url" content="{{site.url}}{% if page.id %}{{page.url}}{% else %}{{page.lang_url}}/{% endif %}" />
 
 {% if site.ga %}
     <script type="text/javascript">
@@ -49,7 +49,7 @@
 <nav class="top">
     <div class="container">
         <div class="row">
-            <h1 class="title"><a href="{{site.baseurl}}{{page.lang_url}}/">Jindřich Doležy</a>
+            <h1 class="title"><a href="{{page.lang_url}}/">Jindřich Doležy</a>
                 <small>{{site.data.lang.claim[page.lang]}}</small>
             </h1>
 
@@ -66,27 +66,25 @@
             <ul class="menu">
                 {% if page.active == %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
+                <li>{% endif %}<a href="{{page.lang_url}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
 
                 {% if page.active == 'about' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}{{page.lang_url}}/about/">{{site.data.lang.menuAbout[page.lang]}}</a>
+                <li>{% endif %}<a href="{{page.lang_url}}/about/">{{site.data.lang.menuAbout[page.lang]}}</a>
                 </li>
 
                 {% if page.lang == 'cz' %}
                 {% if page.active == 'blog' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
+                <li>{% endif %}<a href="/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
 
                 {% if page.active == 'muzeum' %}
                 <li class="active">{% else %}
-                <li>{% endif %}<a href="{{site.baseurl}}/muzeum/">{{site.data.lang.menuMuzeum[page.lang]}}</a></li>
+                <li>{% endif %}<a href="/muzeum/">{{site.data.lang.menuMuzeum[page.lang]}}</a></li>
                 {% endif %}
 
-
                 <li class="lang">
-                    <a href="{{site.baseurl}}{{ site.data.lang.menuSwitchLangUrl[page.lang] }}/">
-                        {{ site.data.lang.menuSwitchLang[page.lang] }}</a>
+                    <a href="{{ site.data.lang.menuSwitchLangUrl[page.lang] }}/">{{ site.data.lang.menuSwitchLang[page.lang] }}</a>
                 </li>
             </ul>
         </div>
@@ -116,7 +114,7 @@
     </div>
 </div>
 
-<script src="{{ site.baseurl }}/js/script.min.js"></script>
+<script src="/js/script.min.js"></script>
 
 {% endif %}
 </body>

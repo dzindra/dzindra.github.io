@@ -10,4 +10,4 @@ Po nějaké době jsem vytáhl ze skříně starý notebook, na kterém jsem dř
 Byla by škoda je nechat jenom tak ležet a proto je tady
  nová sekce, ve které tyto výtvory můžete obdivovat. Takže neváhejte a vzhůru do [muzea][muzeum].
 
-[muzeum]: {{site.baseurl}}/muzeum
+[muzeum]: /muzeum

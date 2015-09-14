@@ -5,10 +5,10 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title>{{ site.name | strip_html }}</title>
-    <link href="{{ site.baseurl | prepend: site.url | append:'/' }}atom.xml" rel="self"/>
-    <link href="{{ site.baseurl | prepend: site.url | append:'/' }}"/>
+    <link href="{{ site.url }}/atom.xml" rel="self"/>
+    <link href="{{ site.url }}/"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>{{ site.baseurl | prepend: site.url }}/</id>
+    <id>{{ site.url }}/</id>
     <author>
         <name>{{ site.author | strip_html }}</name>
         {% if site.email %}<email>{{ site.email }}</email>{% endif %}
@@ -16,10 +16,10 @@ layout: null
 
     {% for post in site.posts limit: 20 %}
     <entry>
-        <id>{{ site.baseurl | prepend: site.url }}{{ post.id | uri_escape }}</id>
+        <id>{{ site.url }}{{ post.id | uri_escape }}</id>
         <title>{{ post.title | strip_html }}</title>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <link rel="alternate" href="{{ site.baseurl | prepend: site.url }}{{ post.url }}"/>
+        <link rel="alternate" href="{{ site.url }}{{ post.url }}"/>
         <summary>{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</summary>
     </entry>
     {% endfor %}
