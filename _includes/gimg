@@ -1,0 +1,13 @@
+{% comment %}
+  gallery image
+
+  surround multiple includes with <div class='gallery'>...</div>
+
+  inputs:
+    f - link href (big one)
+    t - title
+    g - lightbox group (optinal)
+
+  also needs assets variable (base path for assets)
+
+{% endcomment %}{% capture __ff %}thumb-{{include.f}}{% endcapture %}{% capture __g %}{% if include.g %}{{include.g}}{% else %}default{% endif %}{% endcapture %}<div>{% include img t=include.t f=include.f ff=__ff g=__g c='thumbnail' %}</div>

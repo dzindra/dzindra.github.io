@@ -9,6 +9,7 @@
 @import "bootstrap/type.less";
 // Components
 @import "bootstrap/pagination.less";
+@import "bootstrap/thumbnails.less";
 // Utility classes
 @import "bootstrap/utilities.less";
 @import "bootstrap/responsive-utilities.less";
@@ -116,10 +117,33 @@ body {
     font-size: 130%;
     padding-left: 8px;
   }
+
+  .holder {
+    display: inline-block;
+    margin: 10px 5px;
+  }
 }
 
 @media (max-width: @screen-sm-max) {
   img {
     max-width: 100% !important;
+  }
+}
+
+.thumbnail {
+  a&:hover,
+  a&:focus,
+  a&.active {
+    border-color: @link-hover-color;
+  }
+}
+
+.gallery {
+  .make-row();
+
+  &>div {
+    .make-xs-column(6);
+    .make-sm-column(4);
+    .make-md-column(3);
   }
 }
