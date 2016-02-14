@@ -7,7 +7,7 @@ paginate_path: "/blog/page:num/"
 timezone: Europe/Prague
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 name: Jindřich Doležy
 author: Jindřich Doležy

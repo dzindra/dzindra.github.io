@@ -19,7 +19,7 @@ Post absolute url:
 {{ site.url }}{% post_url 2013-11-11-sandbox %}
 
 Including lightboxed images:
-{% capture assets %}/images/test{% endcapture %}
+{% capture assets %}/assets/images/test{% endcapture %}
 {% include img t='Title 1a' f='1.jpg' ff='2.jpg' g='x' w=1024 %}
 
 
