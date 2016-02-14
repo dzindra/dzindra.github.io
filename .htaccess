@@ -16,7 +16,7 @@ AddDefaultCharset utf-8
         RewriteEngine On
         # RewriteBase /
 
-        RewriteCond %{HTTP_HOST} !^dolezy\.cz$ [NC]
+        RewriteCond %{HTTP_HOST} !^dolezy\.cz(:[0-9]+)?$ [NC]
         RewriteCond %{HTTP_HOST} !^localhost$ [NC]
         RewriteRule (.*) https://dolezy.cz/$1 [R=301,QSA,L]
 </IfModule>
