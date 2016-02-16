@@ -1,0 +1,12 @@
+{% comment %}
+  renders gallery collection
+
+  inputs:
+    g - gallery collection item
+    p - preview images only
+
+{% endcomment %}{% assign prevOnly = include.p | default:false %}<div class="gallery">{% capture assets %}/assets/images/{{include.g.path | basename}}{% endcapture %}
+{% for img in include.g.images %}{% if img[1].preview or prevOnly == false %}{% assign imgName = img[0] %}{% assign imgTitle = img[1].title | default:img[1] %}{% if imgTitle == %}{% assign imgTitle = imgName | basename %}{% endif %}
+{% include gimg t=imgTitle f=imgName %}
+{% endif %}{% endfor %}
+</div>

@@ -1,0 +1,14 @@
+---
+title: Galerie
+active: gallery
+---
+
+<h2>{{ page.title }}</h2>
+
+{% for gallery in site.gallery %}
+<hr />
+<h2><a href="{{ gallery.url }}">{{ gallery.title }}</a> <small>{{ gallery.date | date: "%d.%m.%Y" }}</small></h2>
+{{ gallery.content }}
+<p><a href="{{ gallery.url }}">Celá galerie &raquo;</a></p>
+{% include gallery g=gallery p=true %}
+{% endfor %}

@@ -19,6 +19,10 @@ twitter: xDzindra
 # url can not end with slash
 url: https://dolezy.cz
 
+collections:
+  gallery:
+    output: true
+
 defaults:
   -
     scope:
@@ -40,3 +44,11 @@ defaults:
     values:
       layout: "post"
       categories: ["blog"]
+      active: "blog"
+  -
+    scope:
+      path: ""
+      type: "gallery"
+    values:
+      layout: "gallery"
+      active: "gallery"

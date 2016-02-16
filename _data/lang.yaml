@@ -15,6 +15,10 @@ menuMuzeum:
   en: Museum
   cz: Muzeum
 
+menuGallery:
+  en: Gallery
+  cz: Galerie
+
 # language switcher
 menuSwitchLang:
   en: 'česky'

@@ -64,7 +64,7 @@
             <div class="clearfix visible-xs"></div>
 
             <ul class="menu">
-                {% if page.active == %}
+                {% if page.active == 'home' %}
                 <li class="active">{% else %}
                 <li>{% endif %}<a href="{{page.lang_url}}/">{{site.data.lang.menuHome[page.lang]}}</a></li>
 
@@ -81,6 +81,10 @@
                 {% if page.active == 'muzeum' %}
                 <li class="active">{% else %}
                 <li>{% endif %}<a href="/muzeum/">{{site.data.lang.menuMuzeum[page.lang]}}</a></li>
+
+                {% if page.active == 'gallery' %}
+                <li class="active">{% else %}
+                <li>{% endif %}<a href="/gallery/">{{site.data.lang.menuGallery[page.lang]}}</a></li>
                 {% endif %}
 
                 <li class="lang">
