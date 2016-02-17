@@ -1,0 +1,11 @@
+---
+title: Galerie
+summary: Protože blogování mi zatím moc nejde, tak jsem se rozhodl přidat alespoň fotky několika věcí, které jsem v poslední době vyrobil. 
+nodetail: true
+
+---
+
+Protože blogování mi zatím moc nejde, tak jsem se rozhodl přidat alespoň fotky několika věcí,
+ které jsem v poslední době vyrobil. Můžete si je prohlédnout v [galerii][galerie].
+                                     
+[galerie]: /gallery/

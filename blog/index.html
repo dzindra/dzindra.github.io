@@ -8,7 +8,7 @@ active: blog
     <small>{{ post.date | date: "%d.%m.%Y" }}</small>
 </h2>
 {{ post.excerpt }}
-<p><a href="{{ post.url }}">Číst dál &raquo;</a></p>
+{% if post.nodetail != true %}<p><a href="{{ post.url }}">Číst dál &raquo;</a></p>{% endif %}
 
 {% unless forloop.last %}<hr/>{% endunless %}
 {% endfor %}
