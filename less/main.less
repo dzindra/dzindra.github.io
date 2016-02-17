@@ -146,3 +146,36 @@ body {
     .make-md-column(3);
   }
 }
+
+.galleryNav {
+  .make-row();
+  margin-bottom: 25px;
+
+  .prev, .next {
+    .make-xs-column(6);
+  }
+  .next {
+    text-align: right;
+  }
+}
+
+.galleryList {
+  .make-row();
+
+  &>div {
+    a {
+      text-decoration: none;
+    }
+    .caption {
+      text-align: center;
+      h3 {
+        margin: 0;
+        font-size: @font-size-base*1.1;
+        line-height: 1;
+      }
+    }
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(4);
+  }
+}

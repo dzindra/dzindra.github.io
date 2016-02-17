@@ -2,9 +2,28 @@
 layout: default
 ---
 <h2>{{ page.title }} <small>{{ page.date | date: "%d.%m.%Y" }}</small></h2>
+{% assign galleries = site.gallery | sort: "date" | reverse %}
+{% for gallery in galleries %}{% if gallery.id == page.id %}
+{% unless forloop.first %}{% assign prevUrl = prev.url %}{% assign prevTitle = prev.title %}{% endunless %}
+{% unless forloop.last %}{% assign next = galleries[forloop.index] %}{% assign nextUrl = next.url %}{% assign nextTitle = next.title %}{% endunless %}
+{% endif %}{% assign prev = gallery %}{% endfor %}
 
 {{ content }}
-{% include gallery g=page %}
+
+{%capture galleryNav %}<div class="galleryNav">
+    {% if prevUrl %}<a href="{{prevUrl}}" class="prev">&laquo; {{prevTitle}}</a>{% else %}<span class="prev"></span>{% endif %}
+    {% if nextUrl %}<a href="{{nextUrl}}" class="next">{{nextTitle}} &raquo;</a>{% else %}<span class="next"></span>{% endif %}
+</div>{% endcapture %}
+
+{{ galleryNav }}
+
+<div class="gallery">{% capture assets %}/assets/images/{{page.path | basename}}{% endcapture %}
+    {% for img in page.images %}{% assign imgName = img[0] %}{% assign imgTitle = img[1]|default:"" %}
+    {% include gimg t=imgTitle f=imgName %}
+    {% endfor %}
+</div>
+
+{{ galleryNav }}
 
 <div class="sharing">
     Líbila se Vám galerie? Sdílejte přes
