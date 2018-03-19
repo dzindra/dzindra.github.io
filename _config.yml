@@ -1,9 +1,6 @@
-gems: [jekyll-paginate]
 exclude: ['.idea','less','sources','CNAME','README.md','LICENSE','deploy.sh']
 keep_files: ['.git','.idea']
 permalink: pretty
-paginate: 5
-paginate_path: "/blog/page:num/"
 timezone: Europe/Prague
 
 markdown: kramdown

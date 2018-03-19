@@ -44,7 +44,7 @@
 
 
 <body>
-{% if page.lang == %}<strong>No lang!</strong>{% else %}
+{% if page.lang == "" %}<strong>No lang!</strong>{% else %}
 
 <nav class="top">
     <div class="container">
@@ -74,10 +74,6 @@
                 </li>
 
                 {% if page.lang == 'cz' %}
-                {% if page.active == 'blog' %}
-                <li class="active">{% else %}
-                <li>{% endif %}<a href="/blog/">{{site.data.lang.menuBlog[page.lang]}}</a></li>
-
                 {% if page.active == 'muzeum' %}
                 <li class="active">{% else %}
                 <li>{% endif %}<a href="/muzeum/">{{site.data.lang.menuMuzeum[page.lang]}}</a></li>
